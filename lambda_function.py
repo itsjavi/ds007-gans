@@ -8,5 +8,5 @@ def lambda_handler(event, context):
    
     return {
         'weather': json.loads(weather_df.to_json()),
-        'flights': '' // TODO
+        'flights': '' # TODO
     }

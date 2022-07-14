@@ -7,7 +7,9 @@ from pytz import timezone
 # local imports:
 import constants
 
-
+def get_cities_df():
+    table_df = pd.read_sql_table("cities", con=constants.DB_CONN_URI)
+    return table_df[:1] # just one
 
 def get_airports_df():
     table_df = pd.read_sql_table("airports", con=constants.DB_CONN_URI)
