@@ -2,7 +2,7 @@ import json
 import requests
 import apis
 
-def df_to_jsonable_array(df):
+def df_to_json_serializable(df):
     return json.loads(json.dumps(df.to_dict('records'), default=str))
 
 
@@ -11,6 +11,6 @@ def lambda_handler(event, context):
     weather_df = apis.get_weathers_df().tail(5)
    
     return {
-        'weather': df_to_jsonable_array(weather_df),
+        'weather': df_to_json_serializable(weather_df),
         'flights': '' # TODO
     }
