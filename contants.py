@@ -1,0 +1,9 @@
+DB_SCHEMA = 'gans'
+DB_HOST = '?????.?????.eu-central-1.rds.amazonaws.com'
+DB_USER = 'admin'
+DB_PASS = '??????'
+DB_PORT = 3306
+DB_CONN_URI = f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_SCHEMA}"
+
+OPENWEATHER_API_KEY= '??????'
+RAPIDAPI_API_KEY = '??????'
